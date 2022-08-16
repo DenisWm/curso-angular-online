@@ -8,9 +8,17 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-
+  titulo = 'Seja bem-vindo!';
+  pudim = 'uma palavra';
   constructor(){
     
   }
 
+  eventoRecebido($event: any){
+    console.log('AppComponent: EVENTO RECEBIDO:' + $event);
+  }
+
+  valorAtualizado($event: any){
+    console.log('valor atualizado:', $event);
+  }
 }

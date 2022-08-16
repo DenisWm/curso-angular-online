@@ -1,0 +1,15 @@
+<h1> Exemplpos Event Binding:</h1>
+
+<button (click)="onClickBotaoEmissor($event)">Emitir informação de clique</button>
+
+<button (click)="onClick($event)" (mouseenter)="passouMouse()">Clique em mim!</button>
+
+<input type="text" [value]="initialValue" (keyup)="digitouAlgo($event)">
+<hr>
+<h1> Exemplpos Property Binding:</h1>
+<h2>Palavra: {{ palavra }}</h2> 
+<input type="text" [value]="initialValue">
+<br>
+<button [disabled]="isDisabled">Clique em mim!</button>
+<br>
+<img [src]="imageURL">

@@ -1,4 +1,5 @@
-<app-header></app-header>
-<app-home></app-home>
+<app-header [titulo]="titulo"></app-header>
+<app-contador [valor]="10" (emissorContagem)="valorAtualizado($event)"></app-contador>
+<app-exercicio-data-binding [palavra]="pudim" (clicado)="eventoRecebido($event)"></app-exercicio-data-binding>
 <app-footer></app-footer>
 
