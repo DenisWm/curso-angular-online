@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let item of listaCategoria">
+        {{ item.categoria }}
+        
+        <div *ngFor="let memes of item.memes; let par = even">
+                <img [src]="PREFIXO_IMAGEM_URL + memes.imagemURL" *ngIf="par">
+                <h2 *ngIf="!par"> PAR </h2>
+        </div>
+        
+    </li>
+</ul>

@@ -10,6 +10,7 @@ export class ExercicioDataBindingComponent implements OnInit {
   @Input() palavra: any;
   
   @Output() clicado = new EventEmitter();
+
   
   constructor() { }
   initialValue = 'nada';

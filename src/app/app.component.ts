@@ -10,6 +10,8 @@ export class AppComponent {
 
   titulo = 'Seja bem-vindo!';
   pudim = 'uma palavra';
+  valorContador = 10;
+  
   constructor(){
     
   }

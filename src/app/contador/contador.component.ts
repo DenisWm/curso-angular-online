@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ContadorComponent {
 
   @Input() valor = 0;
-  @Output() emissorContagem = new EventEmitter();
+  @Output() valorChange = new EventEmitter();
 
   
   constructor() { }
@@ -16,12 +16,12 @@ export class ContadorComponent {
   
   incremento(){
     this.valor +=1;
-    this.emissorContagem.emit(this.valor);
+    this.valorChange.emit(this.valor);
   }
 
   decremento(){
     this.valor -= 1;
-    this.emissorContagem.emit(this.valor);
+    this.valorChange.emit(this.valor);
   }
 
 }
