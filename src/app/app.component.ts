@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   titulo = 'Seja bem-vindo!';
   pudim = 'uma palavra';
   valorContador = 10;
+  showHeader = true;
   
   constructor(){
+    
+  }
+  ngOnInit(): void {
     
   }
 
