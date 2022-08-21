@@ -1,0 +1,24 @@
+<p> Utilizando Pipes, exiba as informações do Array de Compras da seguinte forma:</p>
+<ul *ngFor="let item of compras">
+    <li>
+        Produto: <strong>{{ item.produto | uppercase }}   </strong>    
+    </li>
+    <li>
+        Valor: {{ item.valor | currency: 'BRL' }}
+    </li>
+    <li>
+        Quantidade: {{item.quantidade | number:'1.1-2'}}
+    </li>
+    <li *ngIf="item.peso > 0; else semPeso">
+        Peso: {{ item.peso | number: '1.1-2'}} kg
+    </li>
+    <ng-template #semPeso>
+        <li>
+            Peso: sem peso
+        </li>
+    </ng-template>
+    <li>
+        Data: {{ item.data | date:'EEEE, dd \'de\' MMMM \'de\' yyyy, \'as\' HH:mm'}}
+    </li>
+    <hr>
+</ul>
